@@ -1,41 +1,59 @@
-let cor;
-let posicaoHorizontal; // x
-let posicaoVertical; // y
-
 function setup() {
   createCanvas(400, 400);
-   background(color(100,0,0));
-  cor = color(random(0,255), random(0,255), random(0,255));
-  posicaoHorizontal = 200;
-  posicaoVertical = 200;
 }
 
+function draw() {
+  background(220);     
+}
+function draw() {
+    background("white");
+    
+    rect(0, 10, 100, 150);
+}
+function draw() {
+    background("white");
+
+    fill("red");
+    rect(0, 10, 100, 150);
+}
+function draw() {
+    background("white");
+    
+    stroke("blue") 
+    fill("red") 
+    rect(0, 10, 100, 150)
+}
+function draw() {
+  background(220);
+  
+  stroke("blue");
+  fill("red");
+  rect(mouseX, mouseY, 100, 150);
+}
+function draw() {
+  background(220);
+  
+  stroke("blue");
+  fill("red");
+  
+  console.log(mouseIsPressed);
+  rect(mouseX, mouseY, 100, 150);
+}
+function setup() {
+  // cria uma tela de 400px de largura por 400px de altura
+  createCanvas(400, 400);
+}
+function setup() {
+  createCanvas(400, 400);
+  background("white")
+}
 
 function draw() {
-  
-  fill(cor);
-  circle(posicaoHorizontal,posicaoVertical,50);
- 
+  stroke("blue");
+  fill("red");
   
   
-  if (mouseX < posicaoHorizontal){
-    posicaoHorizontal =  posicaoHorizontal - 1;
+  if (mouseIsPressed) {
+    rect(mouseX, mouseY, 20, 35);
   }
-  
-  if (mouseX > posicaoHorizontal){
-    posicaoHorizontal =  posicaoHorizontal + 1;
-  }
-  
-  if (mouseY < posicaoVertical){
-    posicaoVertical--;
-  }
-    
-  if (mouseY > posicaoVertical){
-    posicaoVertical++;
-  }
-  
-  if (mouseIsPressed){
-    cor = color(random(0,255), random(0,255), random(0,255), random(0,100));
-  }
-    
 }
